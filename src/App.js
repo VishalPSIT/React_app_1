@@ -29,21 +29,24 @@ function App() {
   },[]);
 
   return (
-    <div>
+    <div className="min-h-screen flex flex-col">
 
-      <div>
+      <div >
           <Nav/>
       </div>
+      <div className="bg-gray-400"> 
+          <div>
+              <Filter filterData={filterData}/>
+          </div>
 
-      <div>
-          <Filter filterData={filterData}/>
-      </div>
+          <div className="w-11/12 max-w-[1200px] mx-auto flex flex-wrap justify-center items-center min-h-[50vh]">
+              {
+                loading ? (<Spinner/>) : (<Cards courses = {courses} />) 
+              }
+          </div>
 
-      <div>
-          {
-            loading ? (<Spinner/>) : (<Cards courses = {courses} />) 
-          }
       </div>
+      
 
     </div>
   );

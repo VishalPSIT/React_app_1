@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Card from './card';
 
 const Cards = ({courses}) => {
 
-       
+    const [likedCourses , setLikedCourses] = useState([]);
 
     const getCourses = () => {
         let allcourses = [];
@@ -15,10 +15,8 @@ const Cards = ({courses}) => {
         console.log(allcourses);
         return allcourses;
     }
-    
-    
     return (
-        <div>
+        <div className='flex flex-wrap justify-center gap-4 mb-4 '>
             {
                 getCourses().map((course) => {
                    return <Card key={course.id} course={course}></Card>
