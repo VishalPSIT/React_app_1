@@ -1,0 +1,42 @@
+
+
+
+.spinner {
+   width: 44.8px;
+   height: 44.8px;
+   color: #484ae3;
+   position: relative;
+   background: linear-gradient(currentColor 0 0) center/100% 11.2px,
+          linear-gradient(currentColor 0 0) center/11.2px 100%;
+   background-repeat: no-repeat;
+}
+
+.shapes:before {
+   content: '';
+   position: absolute;
+   inset: 0;
+   background: linear-gradient(currentColor 0 0) 0    0,
+          linear-gradient(currentColor 0 0) 100% 0,
+          linear-gradient(currentColor 0 0) 0    100%,
+          linear-gradient(currentColor 0 0) 100% 100%;
+   background-size: 16.799999999999997px 16.799999999999997px;
+   background-repeat: no-repeat;
+   animation: shapes-9a9hjfmd 1.5s infinite cubic-bezier(0.3,1,0,1);
+}
+
+@keyframes shapes-9a9hjfmd {
+   33% {
+      inset: -11.2px;
+      transform: rotate(0deg);
+   }
+
+   66% {
+      inset: -11.2px;
+      transform: rotate(90deg);
+   }
+
+   100% {
+      inset: 0;
+      transform: rotate(90deg);
+   }
+}
