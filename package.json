@@ -24,12 +24,7 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ],
-    "rules": {
-      
-      "jsx-a11y/img-redundant-alt": "warn"
-      
-    }
+    ]
   },
   "browserslist": {
     "production": [
