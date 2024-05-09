@@ -3,8 +3,8 @@ import React from 'react';
 const Nav = () => {
     return (
         <div >
-            <nav className=" bg-sky-950 py-4 bg-bDark ">
-                <h1>Top Courses</h1>
+            <nav className=" bg-gray-800 py-4 text-center text-white ">
+                <h1 className='font-xl'>Top Courses</h1>
             </nav>
             
             

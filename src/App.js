@@ -7,9 +7,9 @@ import Spinner from "./components/spinner";
 import { toast } from "react-toastify";
 function App() {
 
-  const [courses , setCourses] = useState(null);
+  const [courses , setCourses] = useState(null );
   const [loading , setLoading] = useState(true);
-
+  const [category , setCategory] = useState(filterData[0].title);
   async function fetchData(){
     setLoading(true);
     try{
@@ -29,19 +29,19 @@ function App() {
   },[]);
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-gray-400">
 
       <div >
           <Nav/>
       </div>
-      <div className="bg-gray-400"> 
+      <div className=" "> 
           <div>
-              <Filter filterData={filterData}/>
+              <Filter filterData={filterData} category={category} setCategory={setCategory} />
           </div>
 
           <div className="w-11/12 max-w-[1200px] mx-auto flex flex-wrap justify-center items-center min-h-[50vh]">
               {
-                loading ? (<Spinner/>) : (<Cards courses = {courses} />) 
+                loading ? (<Spinner/>) : (<Cards courses = {courses} category={category} />) 
               }
           </div>
 
@@ -54,3 +54,4 @@ function App() {
 
 export default App;
 //1.32.28y
+//1.45
