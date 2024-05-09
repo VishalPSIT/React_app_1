@@ -15,6 +15,7 @@ function App() {
     try{
       const res = await fetch(apiUrl);
       const output = await res.json();
+      if (output === null) alert("Network not available");
       setCourses(output.data);
       console.log(output);
     }
