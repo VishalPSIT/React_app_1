@@ -1,4 +1,4 @@
-import React, { createFactory, useState } from 'react';
+import React, {useState} from 'react';
 import Card from './card';
 
 const Cards = ({courses,category}) => {

@@ -23,7 +23,7 @@ const Card = (props) => {
     return (
         <div className='w-[300px] bg-sky-950 bg-opacity-70 rounded-md overflow-hidden'>
             <div className='relative'>
-                <img  src={course.image.url}></img>
+                <img  src={course.image.url} alt="image"></img>
             
             <div className='w-[40px] h-[40px] bg-white rounded-full absolute right-2 bottom-[-19px] grid place-items-center '>
                     <button onClick={clickHandler}>
